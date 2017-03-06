@@ -42,7 +42,7 @@ a:hover                        { text-decoration: none; }
 header {
 	background: linear-gradient(to bottom, #363636, #262626);
 	border-bottom: 4px solid #fff;
-	border-top: none;
+	border-top: 0px;
 	border-image: url('../images/head-bg.jpg') 1;
 }
 header h1 {
