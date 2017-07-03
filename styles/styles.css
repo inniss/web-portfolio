@@ -9,7 +9,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 	outline: none;
 	list-style: none;
 }
-select, input, textarea        { font-size: 100$; vertical-align: middle; }
+select, input, textarea        { font-size: 100%; vertical-align: middle; }
 textarea                       { vertical-align: top; }
 :focus                         { outline: none; }
 input[type=submit]             { cursor: pointer; }
@@ -41,7 +41,7 @@ a:hover                        { text-decoration: none; }
 /*----------------------------------------------------------------------------------*/
 header {
 	background: linear-gradient(to bottom, #363636, #262626);
-	border-bottom: 4px solid #fff;
+	border-bottom: 4px solid #262626;
 	border-top: 0px;
 	border-image: url('../images/head-bg.jpg') 1;
 }
@@ -70,6 +70,7 @@ header h1 a .logo-title {
 /*------------------------------------CONTENT---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .content {
+	min-height: calc(100vh - 20px);
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
@@ -78,13 +79,14 @@ header h1 a .logo-title {
 }
 .content .projects-list {
 	text-align: center;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .content .projects-list li {
-	display : inline-block;
-	text-align: center;
 	background: #232323;
 	width: 300px;
-	margin: 8px 8px;
+	margin: 10px 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .content .projects-list li:hover {
@@ -111,6 +113,20 @@ header h1 a .logo-title {
 	color: #8e8e8e;
 	margin: 8px 0px 14px 0px;
 }
+@media screen and (max-width: 959px) {
+	.content {
+		max-width: 640px;
+	}
+}
+@media screen and (max-width: 639px) {
+	.content .projects-list {
+	  justify-content: center;
+	}
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+footer {
+	background: linear-gradient(to bottom, #363636, #262626);
+	height: 20px;
+}
